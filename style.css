@@ -10,7 +10,35 @@ body {
 }
 
 .card {
-    background-color: grey;
+    background-color: gainsboro;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid: 20px 50px 50px 1fr / 1fr 30px;
+    grid-template-areas: 
+            ". remove"
+            "title ."
+            "author ."
+            "pages .";
+}
+
+.card button {
+    grid-area: remove;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+.card h1 {
+    grid-area: title;
+}
+
+.card h2 {
+    grid-area: author;
+}
+
+.card h3 {
+    grid-area: pages;
 }
 
 dialog {

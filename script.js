@@ -35,6 +35,12 @@ function addNewBook() {
     dialog.close();
 }
 
-const cat = new Book('cat', 'mr cat', 100, true);
-const dog = new Book('dog', 'mr dog', 200, true);
-const bird = new Book('cat', 'mr bird', 300, true);
+function prepopulateBook(title, author, pages, read) {
+    const book = new Book(title, author, pages, read);
+    addBookToLibrary(book);
+    displayOnScreen(book);
+}
+
+prepopulateBook('cat', 'mr cat', 100, true);
+prepopulateBook('dog', 'mr dog', 200, true);
+prepopulateBook('cat', 'mr bird', 300, true);

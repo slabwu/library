@@ -1,5 +1,17 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    height: 100px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: end;
+    box-shadow: 3px 3px 5px rgb(225, 228, 228);
 }
 
 .shelf {
@@ -10,8 +22,7 @@ body {
 }
 
 .card {
-    background-color: gainsboro;
-    padding: 20px;
+    padding: 10px 20px 5px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -20,7 +31,7 @@ body {
 .card button {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 190px
 }
 
@@ -57,10 +68,10 @@ form {
 }
 
 .cancel {
-    margin-left: 300px;
+    margin-left: 280px;
     border: none;
     background-color: whitesmoke;
-    font-size: 15px;
+    font-size: 40px;
 }
 
 dialog h1 {

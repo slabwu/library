@@ -33,6 +33,10 @@ function addNewBook() {
     addBookToLibrary(book);
     displayOnScreen(book);
     dialog.close();
+    title.value = '';
+    author.value = '';
+    pages.value = '';
+    read.checked = false;
 }
 
 function prepopulateBook(title, author, pages, read) {

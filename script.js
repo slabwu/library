@@ -9,6 +9,7 @@ function Book(title, author, pages, read) {
     return read ? `${this.title} by ${this.author}, ${this.pages}, read` :
     `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
     }
+    addBookToLibrary(this);
 }
 
 function addBookToLibrary(book) {

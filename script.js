@@ -23,6 +23,7 @@ inputs.forEach((input) => {
 inputs.forEach((input) => input.addEventListener('blur', (e) => {
     if (e.target.checkValidity() && e.target.value != "") {
         e.target.nextElementSibling.textContent = "";
+        input.classList.remove('error');
     }
 }));
 
@@ -116,6 +117,7 @@ function checkForm() {
         inputs.forEach((input) => {
             if (input.value == "") {
                 input.nextElementSibling.textContent = "This field is required";
+                input.classList.add('error');
             }
         });
     }

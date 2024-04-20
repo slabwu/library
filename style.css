@@ -82,9 +82,17 @@ dialog h1 {
 
 form input {
     border: none;
-    border-radius: 5px;
-    height: 20px;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
     margin: 5px 0 0;
+    font-size: 14px;
+    color: black;
+}
+
+form input.error {
+    border: red 1px solid;
+    font-size: 14px;
 }
 
 form button {
@@ -170,9 +178,9 @@ form label {
     align-items: center;
 }
 
-.error {
+p.error {
     margin: 5px 0 0;
     color: red;
     font-size: 12px;
-    height: 30px;
+    height: 20px;
 }

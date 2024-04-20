@@ -45,11 +45,43 @@ body {
 dialog {
     position: absolute;
     margin-top: 100px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px 40px;
+    width: 300px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+}
+
+.cancel {
+    margin-left: 300px;
+    border: none;
+    background-color: whitesmoke;
+    font-size: 15px;
+}
+
+dialog h1 {
+    font-size: 25px;
+}
+
+form input {
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    margin: 5px 0 15px;
+}
+
+form button {
+    border: none;
+    background-color: royalblue;
+    color: white;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
 }
 
 .add {

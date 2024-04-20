@@ -29,7 +29,7 @@ function displayOnScreen(book) {
 }
 
 function addNewBook() {
-    const book = new Book(title.value, author.value, pages.value, Boolean(read.value));
+    const book = new Book(title.value, author.value, pages.value, read.checked);
     addBookToLibrary(book);
     displayOnScreen(book);
     dialog.close();

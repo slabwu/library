@@ -35,7 +35,7 @@ function displayOnScreen(book) {
     card.style.color = `${invertColour(book.colour)}`;
 
     const remove = document.createElement('button');
-    remove.innerText = `x`;
+    remove.innerText = `×`;
     remove.classList.add(`${book.index}`);
     remove.style.color = `${invertColour(book.colour)}`;
     remove.setAttribute('onclick', 'deleteBook(this.className, this.parentElement)');
@@ -98,5 +98,5 @@ function invertColour(hex) {
 
 
 prepopulateBook('Brave New World', 'Aldous Huxley', 311, true, '#1981ff');
-prepopulateBook('Animal Farm', 'George Orwell', 112, true, '#ff195a');
-prepopulateBook('Fahrenheit 451', 'Ray Bradbury', 249, true, '#ffb71c');
+prepopulateBook('Animal Farm', 'George Orwell', 112, true, '#ffb71c');
+prepopulateBook('Fahrenheit 451', 'Ray Bradbury', 249, true, '#ff195a');

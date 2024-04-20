@@ -16,8 +16,6 @@ function Book(title, author, pages, read) {
     return read ? `${this.title} by ${this.author}, ${this.pages}, read` :
     `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
     }
-    addBookToLibrary(this);
-    displayOnScreen(this);
 }
 
 function addBookToLibrary(book) {
@@ -31,11 +29,10 @@ function displayOnScreen(book) {
 }
 
 function addNewBook() {
-    console.log(title.value);
-    console.log(author.value);
-    console.log(pages.value);
-    console.log(Boolean(read.value));
-
+    const book = new Book(title.value, author.value, pages.value, Boolean(read.value));
+    addBookToLibrary(book);
+    displayOnScreen(book);
+    dialog.close();
 }
 
 const cat = new Book('cat', 'mr cat', 100, true);

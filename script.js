@@ -23,9 +23,9 @@ function addBookToLibrary(book) {
 }
 
 function displayOnScreen(book) {
-    const newDiv = document.createElement('div');
-    newDiv.innerText = `${book.info()}`;
-    shelf.appendChild(newDiv);
+    const card = document.createElement('div');
+    card.innerText = `${book.info()}`;
+    shelf.appendChild(card);
 }
 
 function addNewBook() {

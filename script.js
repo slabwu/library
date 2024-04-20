@@ -70,6 +70,9 @@ function prepopulateBook(title, author, pages, read) {
 
 function deleteBook(bookIndex, card) {
     myLibrary.splice(bookIndex, 1);
+    for (i = bookIndex; i < myLibrary.length; i++) {
+        myLibrary[i].index--;
+    }
     card.remove();
 }
 

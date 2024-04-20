@@ -37,6 +37,7 @@ function displayOnScreen(book) {
     const remove = document.createElement('button');
     remove.innerText = `x`;
     remove.classList.add(`${book.index}`);
+    remove.style.color = `${invertColour(book.colour)}`;
     remove.setAttribute('onclick', 'deleteBook(this.className, this.parentElement)');
     card.appendChild(remove);
 
@@ -84,13 +85,6 @@ function deleteBook(bookIndex, card) {
 function invertColour(hex) {
     if (hex.indexOf('#') === 0) {
         hex = hex.slice(1);
-    }
-    // convert 3-digit hex to 6-digits.
-    if (hex.length === 3) {
-        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
-    }
-    if (hex.length !== 6) {
-        throw new Error('Invalid HEX color.');
     }
     var r = parseInt(hex.slice(0, 2), 16),
         g = parseInt(hex.slice(2, 4), 16),

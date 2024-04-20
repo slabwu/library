@@ -62,7 +62,7 @@ dialog {
     border-radius: 10px;
     padding: 20px 40px 40px;
     width: 300px;
-    box-shadow: 2px 2px 5px rgb(57, 57, 57, 0.5);
+    box-shadow: 2px 2px 5px rgb(57, 57, 57, 0.1);
 }
 
 form {
@@ -85,7 +85,7 @@ form input {
     border: none;
     border-radius: 10px;
     height: 40px;
-    padding-left: 15px;
+    padding: 0 15px 0;
     margin: 5px 0 0;
     font-size: 14px;
     background-color: aliceblue;

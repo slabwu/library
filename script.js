@@ -22,6 +22,7 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(book) {
+    book.index = myLibrary.length;
     myLibrary.push(book);
 }
 
@@ -31,7 +32,7 @@ function displayOnScreen(book) {
 
     const remove = document.createElement('button');
     remove.innerText = `x`;
-    remove.addEventListener('click', console.log('hi'))
+    remove.setAttribute('onclick', 'console.log(this)');
     card.appendChild(remove);
 
     const title = document.createElement('h1');

@@ -6,6 +6,9 @@ const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const read = document.getElementById('read');
 const colour = document.getElementById('colour');
+const submit = document.querySelector('.submit');
+const form = document.querySelector('form');
+const inputs = document.querySelectorAll("input");
 
 
 
@@ -93,6 +96,10 @@ function invertColour(hex) {
         ? '#000000'
         : '#FFFFFF';
 }
+
+function checkForm() {
+    form.checkValidity() ? addNewBook() : console.log('invalid');
+};
 
 
 

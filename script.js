@@ -5,16 +5,18 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const read = document.getElementById('read');
+const colour = document.getElementById('colour');
 
 
 
 
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, read, colour) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.colour = colour;
     this.info = () => {
     return read ? `${this.title} by ${this.author}, ${this.pages}, read` :
     `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
@@ -28,7 +30,8 @@ function addBookToLibrary(book) {
 
 function displayOnScreen(book) {
     const card = document.createElement('div');
-    card.classList.add("card");
+    card.classList.add('card');
+    card.style.backgroundColor = `${book.colour}`;
 
     const remove = document.createElement('button');
     remove.innerText = `x`;
@@ -52,7 +55,7 @@ function displayOnScreen(book) {
 }
 
 function addNewBook() {
-    const book = new Book(title.value, author.value, pages.value, read.checked);
+    const book = new Book(title.value, author.value, pages.value, read.checked, colour.value);
     addBookToLibrary(book);
     displayOnScreen(book);
     dialog.close();
@@ -60,10 +63,11 @@ function addNewBook() {
     author.value = '';
     pages.value = '';
     read.checked = false;
+    colour.value = '#ffffff';
 }
 
-function prepopulateBook(title, author, pages, read) {
-    const book = new Book(title, author, pages, read);
+function prepopulateBook(title, author, pages, read, colour) {
+    const book = new Book(title, author, pages, read, colour);
     addBookToLibrary(book);
     displayOnScreen(book);
 }
@@ -79,6 +83,6 @@ function deleteBook(bookIndex, card) {
 
 
 
-prepopulateBook('Brave New World', 'Aldous Huxley', 311, true);
-prepopulateBook('Animal Farm', 'George Orwell', 112, true);
-prepopulateBook('Fahrenheit 451', 'Ray Bradbury', 249, true);
+prepopulateBook('Brave New World', 'Aldous Huxley', 311, true, '#1981ff');
+prepopulateBook('Animal Farm', 'George Orwell', 112, true, '#ff195a');
+prepopulateBook('Fahrenheit 451', 'Ray Bradbury', 249, true, '#ffb71c');

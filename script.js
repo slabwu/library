@@ -29,6 +29,11 @@ function displayOnScreen(book) {
     const card = document.createElement('div');
     card.classList.add("card");
 
+    const remove = document.createElement('button');
+    remove.innerText = `x`;
+    remove.addEventListener('click', console.log('hi'))
+    card.appendChild(remove);
+
     const title = document.createElement('h1');
     title.innerText = `${book.title}`;
     card.appendChild(title);

@@ -1,6 +1,11 @@
 const myLibrary = [];
 const shelf = document.querySelector('.shelf');
 const dialog = document.querySelector('dialog');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const pages = document.getElementById('pages');
+const read = document.getElementById('read');
+
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -26,7 +31,11 @@ function displayOnScreen(book) {
 }
 
 function addNewBook() {
-    dialog.show();
+    console.log(title.value);
+    console.log(author.value);
+    console.log(pages.value);
+    console.log(Boolean(read.value));
+
 }
 
 const cat = new Book('cat', 'mr cat', 100, true);

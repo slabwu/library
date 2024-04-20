@@ -10,10 +10,21 @@
 <body>
     <header></header>
     <div class="shelf"></div>
-    <button onclick="addNewBook()">+</button>
+    <button onclick="dialog.show()">+</button>
     <dialog>
         <button onclick="dialog.close()">X</button>
         <h1>Add a New Book</h1>
+        <form>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+            <label for="pages">Title</label>
+            <input type="number" id="pages" name="pages">
+            <label for="read">Read?</label>
+            <input type="checkbox" id="read">
+            <button type="button" onclick="addNewBook()">Add Book</button>
+        </form>
     </dialog>
 </body>
 </html>

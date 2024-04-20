@@ -79,6 +79,6 @@ function deleteBook(bookIndex, card) {
 
 
 
-prepopulateBook('cat', 'mr cat', 100, true);
-prepopulateBook('dog', 'mr dog', 200, true);
-prepopulateBook('cat', 'mr bird', 300, true);
+prepopulateBook('Brave New World', 'Aldous Huxley', 311, true);
+prepopulateBook('Animal Farm', 'George Orwell', 112, true);
+prepopulateBook('Fahrenheit 451', 'Ray Bradbury', 249, true);

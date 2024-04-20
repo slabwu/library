@@ -1,5 +1,6 @@
 const myLibrary = [];
 const shelf = document.querySelector('.shelf');
+const dialog = document.querySelector('dialog');
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -20,11 +21,12 @@ function addBookToLibrary(book) {
 
 function displayOnScreen(book) {
     const newDiv = document.createElement('div');
-    console.log(shelf);
-    console.log(newDiv);
     newDiv.innerText = `${book.info()}`;
-    console.log(newDiv);
     shelf.appendChild(newDiv);
+}
+
+function addNewBook() {
+    dialog.show();
 }
 
 const cat = new Book('cat', 'mr cat', 100, true);

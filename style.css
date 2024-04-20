@@ -120,6 +120,7 @@ form button {
     height: 20px;
     background-color: #aaa;
     border-radius: 20px;
+    box-shadow: 1px 1px 3px rgb(211, 211, 211);
   }
 
 .switch::after {
@@ -155,7 +156,16 @@ form button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-  }
-  #colour::-webkit-color-swatch {
+    margin: 5px 0 5px;
+}
+
+#colour::-webkit-color-swatch {
     border-radius: 50%;
     border: none;
+    box-shadow: 1px 1px 3px rgb(211, 211, 211);
+}
+
+form label {
+    display: flex;
+    align-items: center;
+}

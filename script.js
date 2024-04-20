@@ -118,6 +118,9 @@ function checkForm() {
             if (input.value == "") {
                 input.nextElementSibling.textContent = "This field is required";
                 input.classList.add('error');
+            } else if (input.value < 1) {
+                input.nextElementSibling.textContent = "Must have at least one page";
+                input.classList.add('error');
             }
         });
     }

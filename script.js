@@ -32,7 +32,8 @@ function displayOnScreen(book) {
 
     const remove = document.createElement('button');
     remove.innerText = `x`;
-    remove.setAttribute('onclick', 'console.log(this)');
+    remove.classList.add(`${book.index}`);
+    remove.setAttribute('onclick', 'console.log(`${this.className}`)');
     card.appendChild(remove);
 
     const title = document.createElement('h1');

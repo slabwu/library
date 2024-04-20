@@ -10,3 +10,7 @@ function Book(title, author, pages, read) {
     `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
   }
 }
+
+function addBookToLibrary(book) {
+    myLibrary.push(book);
+}

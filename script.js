@@ -27,8 +27,20 @@ function addBookToLibrary(book) {
 
 function displayOnScreen(book) {
     const card = document.createElement('div');
-    card.innerText = `${book.info()}`;
     card.classList.add("card");
+
+    const title = document.createElement('h1');
+    title.innerText = `${book.title}`;
+    card.appendChild(title);
+
+    const author = document.createElement('h2');
+    author.innerText = ` by ${book.author}`;
+    card.appendChild(author);
+
+    const pages = document.createElement('h3');
+    pages.innerText = `${book.pages} pages`;
+    card.appendChild(pages);
+
     shelf.appendChild(card);
 }
 

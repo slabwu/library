@@ -18,13 +18,15 @@
             <input type="text" id="title" name="title" class="check" placeholder="Title" required>
             <input type="text" id="author" name="author" class="check" placeholder="Author" required>
             <input type="number" id="pages" name="pages" min="1" class="check" placeholder="Pages" required>
-            <label for="read">Read?
-                <input type="checkbox" id="read">
-                <label for="read" class="switch"></label>
-            </label>
-            <label for="colour">Book Colour
-                <input type="color" id="colour" value="#ffffff">
-            </label>
+            <div class="toggles">
+                <label for="read">Read?
+                    <input type="checkbox" id="read">
+                    <label for="read" class="switch"></label>
+                </label>
+                <label for="colour">Book Colour
+                    <input type="color" id="colour" value="#ffffff">
+                </label>
+            </div>
             <button type="button" class="submit" onclick="checkForm()">Add Book</button>
         </form>
     </dialog>

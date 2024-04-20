@@ -13,13 +13,8 @@ body {
     background-color: gainsboro;
     padding: 20px;
     border-radius: 10px;
-    display: grid;
-    grid: 20px 50px 1fr 1fr / 1fr 30px;
-    grid-template-areas: 
-            ". remove"
-            "title ."
-            "author ."
-            "pages .";
+    display: flex;
+    flex-direction: column;
 }
 
 .card button {
@@ -27,20 +22,24 @@ body {
     background: none;
     border: none;
     font-size: 20px;
+    margin-left: 190px
 }
 
 .card h1 {
-    grid-area: title;
+    margin-bottom: 0;
     font-size: 25px;
 }
 
 .card h2 {
-    grid-area: author;
     font-size: 15px;
 }
 
 .card h3 {
-    grid-area: pages;
+    font-size: 15px;
+    flex: 1;
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 
 dialog {

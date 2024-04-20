@@ -7,6 +7,9 @@ const pages = document.getElementById('pages');
 const read = document.getElementById('read');
 
 
+
+
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -44,6 +47,10 @@ function prepopulateBook(title, author, pages, read) {
     addBookToLibrary(book);
     displayOnScreen(book);
 }
+
+
+
+
 
 prepopulateBook('cat', 'mr cat', 100, true);
 prepopulateBook('dog', 'mr dog', 200, true);

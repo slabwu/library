@@ -5,7 +5,6 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const read = document.getElementById('read');
-let index = 1;
 
 
 
@@ -23,8 +22,7 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(book) {
-    book.index = index;
-    index++;
+    book.index = myLibrary.length;
     myLibrary.push(book);
 }
 

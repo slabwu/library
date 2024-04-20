@@ -8,11 +8,23 @@ const read = document.getElementById('read');
 const colour = document.getElementById('colour');
 const submit = document.querySelector('.submit');
 const form = document.querySelector('form');
-const inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll(".check");
 
 
 
 
+
+inputs.forEach((input) => {
+    const error = document.createElement('p');
+    error.classList.add('error');
+    input.after(error);
+});
+
+inputs.forEach((input) => input.addEventListener('blur', (e) => {
+    if (e.target.checkValidity() && e.target.value != "") {
+        e.target.nextElementSibling.textContent = "";
+    }
+}));
 
 function Book(title, author, pages, read, colour) {
     this.title = title;
@@ -98,7 +110,15 @@ function invertColour(hex) {
 }
 
 function checkForm() {
-    form.checkValidity() ? addNewBook() : console.log('invalid');
+    if (form.checkValidity()) {
+        addNewBook();
+    } else {
+        inputs.forEach((input) => {
+            if (input.value == "") {
+                input.nextElementSibling.textContent = "This field is required";
+            }
+        });
+    }
 };
 
 

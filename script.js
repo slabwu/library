@@ -28,6 +28,7 @@ function addBookToLibrary(book) {
 function displayOnScreen(book) {
     const card = document.createElement('div');
     card.innerText = `${book.info()}`;
+    card.classList.add("card");
     shelf.appendChild(card);
 }
 

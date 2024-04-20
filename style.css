@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shelf {
+    display: grid;
+    grid: 300px / repeat(auto-fit, 250px);
+    gap: 20px;
+    grid-auto-rows: 300px;
+}
+
+.card {
+    background-color: grey;
+}

@@ -5,6 +5,7 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const read = document.getElementById('read');
+let index = 1;
 
 
 
@@ -22,7 +23,8 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(book) {
-    book.index = myLibrary.length;
+    book.index = index;
+    index++;
     myLibrary.push(book);
 }
 
@@ -33,7 +35,7 @@ function displayOnScreen(book) {
     const remove = document.createElement('button');
     remove.innerText = `x`;
     remove.classList.add(`${book.index}`);
-    remove.setAttribute('onclick', 'console.log(`${this.className}`)');
+    remove.setAttribute('onclick', 'deleteBook(this.className, this.parentElement)');
     card.appendChild(remove);
 
     const title = document.createElement('h1');
@@ -68,6 +70,10 @@ function prepopulateBook(title, author, pages, read) {
     displayOnScreen(book);
 }
 
+function deleteBook(index, card) {
+    console.log(index);
+    console.log(card);
+}
 
 
 

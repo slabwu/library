@@ -68,9 +68,9 @@ function prepopulateBook(title, author, pages, read) {
     displayOnScreen(book);
 }
 
-function deleteBook(index, card) {
-    console.log(index);
-    console.log(card);
+function deleteBook(bookIndex, card) {
+    myLibrary.splice(bookIndex, 1);
+    card.remove();
 }
 
 

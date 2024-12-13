@@ -27,17 +27,34 @@ inputs.forEach((input) => input.addEventListener('blur', (e) => {
     }
 }));
 
-function Book(title, author, pages, read, colour) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.colour = colour;
-    this.info = () => {
-    return read ? `${this.title} by ${this.author}, ${this.pages}, read` :
-    `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
+//Class
+class Book {
+    constructor(title, author, pages, read, colour) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.colour = colour;
+    }
+
+    info() {
+        return read ? `${this.title} by ${this.author}, ${this.pages}, read` :
+        `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
     }
 }
+
+//Object Constructor
+// function Book(title, author, pages, read, colour) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.colour = colour;
+//     this.info = () => {
+//     return read ? `${this.title} by ${this.author}, ${this.pages}, read` :
+//     `${this.title} by ${this.author}, ${this.pages}, not read yet` ;
+//     }
+// }
 
 function addBookToLibrary(book) {
     book.index = myLibrary.length;
